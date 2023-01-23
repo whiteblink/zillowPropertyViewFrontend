@@ -6,7 +6,6 @@ $(document).ready(function () {
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
         var target = $(e.target);
-        // console.log(target)
         var zillowStep = document.getElementById('zillowStep').style.display="none";
     
         if (target.parent().hasClass('disabled')) {
@@ -14,18 +13,34 @@ $(document).ready(function () {
         }
     });
 
+
     $(".next-step").click(function (e) {
 
         var active = $('.wizard .nav-tabs li.active');
-        active.next().removeClass('disabled');
+        
         var zillowStep = document.getElementById('zillowStep').style.display="none";
+        if(active.next().is('.zillow')){
+           active = active.next();
+           active.next().next().removeClass('disabled'); 
+          
+        }else{
+          active.next().removeClass('disabled'); 
+        }
         nextTab(active);
-
-
+        
     });
     $(".prev-step").click(function (e) {
 
         var active = $('.wizard .nav-tabs li.active');
+
+        if(active.prev().is('.zillow')){
+           active = active.prev();
+           active.prev().prev().removeClass('disabled'); 
+          
+        }else{
+          active.prev().removeClass('disabled');
+        }
+
         prevTab(active);
 
     });
@@ -67,4 +82,5 @@ $("#mySelect").change(function(){
     zillowStep.style.display="block";
     dataZillow.classList.add('active');
     zillowStep.classList.add('active');
+
   }
