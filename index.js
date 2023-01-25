@@ -27,6 +27,7 @@ $(document).ready(function () {
         active.next().removeClass('disabled'); 
       }
       nextTab(active);
+      window.scrollTo(0, 0);
       
   });
   $(".prev-step").click(function (e) {
@@ -42,6 +43,8 @@ $(document).ready(function () {
       }
 
       prevTab(active);
+      window.scrollTo(0, 0);
+
 
   });
 });

@@ -10,10 +10,10 @@
 <body>
     <section class="signup-step-container">
         <div class="">
-            <div class="row d-flex justify-content-center">
+            <div class="row d-flex justify-content-center ml-0 mr-0">
                 <div class="col">
                     <div class="wizard">
-                        <div class="wizard-inner">
+                        <div class="wizard-inner d-none">
                             <div class="connecting-line"></div>
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
@@ -62,11 +62,14 @@
                                 </li>
                             </ul>
                         </div>
-
+                        <div>
+                            <a class="btn btn-info mx-3" target="_blank" href="https://accounts.zoho.in/signin?servicename=CRMPlus&signupurl=https://www.zoho.in/crm/crmplus/signup.html">Go to Zoho CRM</a> 
+                            <a class="btn btn-info pull-right " target="_blank" href="https://www.zillow.com/homedetails/912-Shackleton-Dr-Canal-Fulton-OH-44614/82678959_zpid/">Go to Zillow</a>
+                        </div>
                         <form role="form" action="index.html" class="login-box">
                             <div class="tab-content" id="main_form">
                                 <div class="tab-pane active" role="tabpanel" id="step1">
-                                    <h4 class="text-center  my-3">Property Information <i
+                                    <h4 class="text-center  my-3">1. Property Information <i
                                             class="fa-solid fa-house-user"></i>
                                     </h4>
                                     <div class="row border shadow-sm mx-3">
@@ -102,61 +105,6 @@
                                                     : <span>3</span>
                                                 </div>
                                             </div>
-
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-brands fa-ideal"></i>&nbsp;<label>Lead Status</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-magnifying-glass-location"></i>&nbsp;<label>SecondaryReview</label>
-                                                    <select id="mySelect">
-                                                        <option value="" selected>Choose Secondary Review</option>
-                                                        <option class="interested" value="Interested">😊 Interested
-                                                        </option>
-                                                        <option class="UnSure" value="UnSure">🤔 UnSure</option>
-                                                        <option class="NotInterested" value="NotInterested">😒
-                                                            Not-Interested</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-shelter"></i>&nbsp;<label>Neighbourhood</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-brands fa-monero"></i>&nbsp;<label>Lead owner</label>
-                                                    : <span>1</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-regular fa-clock"></i>&nbsp;<label>LastUpdated</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-asterisk"></i>&nbsp;<label>Description</label>
-                                                    : <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Autem minus repellat architecto veritatis, excepturi officiis
-                                                        sapiente nesciunt atque deleniti impedit, reiciendis voluptatem
-                                                        non molestias eligendi quod laboriosam suscipit dolor
-                                                        iure?</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i class="fa-solid fa-wave-square"></i>&nbsp;<label>Lot Size</label>
@@ -173,7 +121,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
-                                                        class="fa-solid fa-house-laptop"></i>&nbsp;<label>HomeStatusSize</label>
+                                                        class="fa-solid fa-house-laptop"></i>&nbsp;<label>HomeStatus</label>
                                                     : <span>3</span>
                                                 </div>
                                             </div>
@@ -184,21 +132,169 @@
                                                     : <span>3</span>
                                                 </div>
                                             </div>
+                                            
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i class="fa-solid fa-asterisk"></i>&nbsp;<label>Description</label>
+                                                    : <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Autem minus repellat architecto veritatis, excepturi officiis
+                                                        sapiente nesciunt atque deleniti impedit, reiciendis voluptatem
+                                                        non molestias eligendi quod laboriosam suscipit dolor
+                                                        iure?</span>
+                                                </div>
+                                            </div>
+                                            
+
+                                        </div>                                    
+                                        <div class="col">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i class="fa-brands fa-ideal"></i>&nbsp;<label>Lead Status</label>
+                                                    : <span>Name</span>
+                                                </div>
+                                            </div>                                            
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
-                                                        class="fa-solid fa-money-bill-transfer"></i>&nbsp;<label>DateSold</label>
+                                                        class="fa-solid fa-money-bill-1-wave"></i>&nbsp;<label>CashonCash</label>
+                                                    : <span>Name</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-file-invoice-dollar"></i>&nbsp;<label>ClosingCashonCash</label>
+                                                    : <span>ClosingCashonCash</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-money-check-dollar"></i>&nbsp;<label>FreeCash</label>
+                                                    : <span>2</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-money-bills"></i>&nbsp;<label>FreeCashYear2</label>
+                                                    : <span>1</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i class="fa-solid fa-dollar-sign"></i>&nbsp;<label>price</label>
                                                     : <span>3</span>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-sign-hanging"></i>&nbsp;<label>zestimate</label>
+                                                    : <span>3</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-truck-ramp-box"></i>&nbsp;<label>HUDRent</label>
+                                                    : <span>3</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-cash-register"></i>&nbsp;<label>ZillowRentEstimate</label>
+                                                    : <span>3</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-barcode"></i>&nbsp;<label>LastSoldPrice</label>
+                                                    : <span>3</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-sheet-plastic"></i>&nbsp;<label>PropertyCalculationSpreedsheet</label>
+                                                    : <span>3</span>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- <div class="col-md-12">
+                                                <div class="form-group">
                                                     <i class="fa-solid fa-link"></i>&nbsp;<label>Zillow URL</label>
                                                     : <span><a onclick="zillowShow()"
                                                             href="#dataZillow">https://www.zillow.com/</a></span>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
+                                        <div class="col">                                            
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i class="fa-solid fa-landmark"></i>&nbsp;<label>Mortgage</label>
+                                                    : <span>Name</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-credit-card"></i>&nbsp;<label>DownPayment</label>
+                                                    : <span>3</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-file-invoice-dollar"></i>&nbsp;<label>ManagementCost</label>
+                                                    : <span>2</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-receipt"></i>&nbsp;<label>MaintenanceReserve</label>
+                                                    : <span>1</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-hand-holding-dollar"></i>&nbsp;<label>TotalMonthlyExpenses</label>
+                                                    : <span>3</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;<label>ProppertyTaxRate</label>
+                                                    : <span>3</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;<label>ProppertyTaxes</label>
+                                                    : <span>3</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-money-bill-trend-up"></i>&nbsp;<label>TaxAssessedYear</label>
+                                                    : <span>3</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-money-bill-trend-up"></i>&nbsp;<label>TaxAssessedValue</label>
+                                                    : <span>3</span>
+                                                </div>
+                                            </div>
+                                        </div>                                                                        
                                     </div>
                                     <div id="images">
                                         <div class="bg mt-5">
@@ -217,7 +313,7 @@
                                                           <div class="row">
                                                             <div class="col-sm-6 image">
                                                               <div class="item">
-                                                                <h1>Today Deal</h1>
+                                                                
                                                                 <img class="img-fluid" src="https://thumbs.dreamstime.com/b/lockport-ny-usa-july-small-typical-american-house-small-typical-american-house-166514313.jpg" alt="">
                                                               </div><!--enditem-->
                                                             </div><!--endcol-->
@@ -230,7 +326,7 @@
                                                               </div><!--endtop-->
                                                               <div class="details">
                                                                 <h2 class="cr3">$209,900</h2>
-                                                                <p class="cr4">912 Shackleton Dr, Canal Fulton, OH 44614,<br> Est. payment: $1,630/mon</p>
+                                                                <p class="cr4">911 Shackleton Dr, Canal Fulton, OH 44614,<br> Est. payment: $1,630/mon</p>
                                                                 <div class="rating">
                                                                   <i class="fa fa-star"></i>
                                                                   <i class="fa fa-star"></i>
@@ -238,7 +334,7 @@
                                                                   <i class="fa fa-star"></i>
                                                                   <i class="fa fa-star"></i>
                                                                 </div><!--endrating-->
-                                                                <a href="" id="closeBtn" class="btn btn-food"><i class="fa-solid fa-xmark"></i></a>
+                                                                
                                                           </div><!--enddetails-->
                                                         </div><!--endcol-->
                                                       </div><!--endrow-->
@@ -249,7 +345,7 @@
                                                       <div class="row">
                                                         <div class="col-sm-6 image">
                                                           <div class="item">
-                                                            <h1>Today Deal</h1>
+                                                            
                                                             <img class="img-fluid" src="https://i.pinimg.com/originals/5e/ba/8e/5eba8ea3ff0d61d703a4742a128c908d.jpg" alt="">
                                                           </div><!--enditem-->
                                                         </div><!--endcol-->
@@ -262,7 +358,7 @@
                                                           </div><!--endtop-->
                                                           <div class="details">
                                                             <h2 class="cr3">$209,900</h2>
-                                                                <p class="cr4">912 Shackleton Dr, Canal Fulton, OH 44614,<br> Est. payment: $1,630/mon</p>
+                                                                <p class="cr4">911 Shackleton Dr, Canal Fulton, OH 44614,<br> Est. payment: $1,630/mon</p>
                                                             <div class="rating">
                                                               <i class="fa fa-star"></i>
                                                               <i class="fa fa-star"></i>
@@ -270,7 +366,7 @@
                                                               <i class="fa fa-star"></i>
                                                               <i class="fa fa-star"></i>
                                                             </div><!--endrating-->
-                                                        <a href="" id="closeBtn" class="btn"><i class="fa-solid fa-xmark"></i></a>
+                                                        
                                                       </div><!--enddetails-->
                                                     </div><!--endcol-->
                                                   </div><!--endrow-->
@@ -286,1142 +382,992 @@
                                           </div><!--endbg-product-->
                                           </div>
                                           </div>
-                                    </div>
-                                    <h4 class="text-center my-3">Financial Information <i
-                                            class="fa-solid fa-hand-holding-dollar"></i></h4>
-                                    <div class="row border shadow-sm mx-3 ">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-money-bill-1-wave"></i>&nbsp;<label>CashonCash</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-file-invoice-dollar"></i>&nbsp;<label>ClosingCashonCash</label>
-                                                    : <span>ClosingCashonCash</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-money-check-dollar"></i>&nbsp;<label>FreeCash</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-money-bills"></i>&nbsp;<label>FreeCashYear2</label>
-                                                    : <span>1</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-dollar-sign"></i>&nbsp;<label>price</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-sign-hanging"></i>&nbsp;<label>zestimate</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-truck-ramp-box"></i>&nbsp;<label>HUDRent</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-cash-register"></i>&nbsp;<label>ZillowRentEstimate</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-barcode"></i>&nbsp;<label>LastSoldPrice</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-sheet-plastic"></i>&nbsp;<label>PropertyCalculationSpreedsheet</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-landmark"></i>&nbsp;<label>Mortgage</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-credit-card"></i>&nbsp;<label>DownPayment</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-file-invoice-dollar"></i>&nbsp;<label>ManagementCost</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-receipt"></i>&nbsp;<label>MaintenanceReserve</label>
-                                                    : <span>1</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-hand-holding-dollar"></i>&nbsp;<label>TotalMonthlyExpenses</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;<label>ProppertyTaxRate</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;<label>ProppertyTaxes</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-money-bill-trend-up"></i>&nbsp;<label>TaxAssessedYear</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-money-bill-trend-up"></i>&nbsp;<label>TaxAssessedValue</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h4 class="text-center my-3"> Derived Information <i
-                                            class="fa-solid fa-circle-info"></i>
-                                    </h4>
-                                    <div class="row border shadow-sm mx-3">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-shoe-prints"></i>&nbsp;<label>walkScore</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-motorcycle"></i>&nbsp;<label>bikeScore</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-bus"></i>&nbsp;<label>transitScore</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h4 class="text-center my-3">Address Details <i
-                                            class="fa-solid fa-location-dot"></i>
-                                    </h4>
-                                    <div class="row border shadow-sm mx-3">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-road"></i>&nbsp;<label>StreetAddress</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-tree-city"></i>&nbsp;<label>City</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-flag-usa"></i>&nbsp;<label>State</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-thumbtack"></i>&nbsp;<label>zipcode</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-earth-americas"></i>&nbsp;<label>County</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-flag-usa"></i>&nbsp;<label>Country</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h4 class="text-center my-3">County Office Details <i
-                                            class="fa-solid fa-briefcase"></i>
-                                    </h4>
-                                    <div class="row border shadow-sm mx-3">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-signature"></i>&nbsp;<label>Lead Name</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-bed"></i>&nbsp;<label>Bedrooms</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-bath"></i>&nbsp;<label>Bathrooms</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-couch"></i>&nbsp;<label>Living Area</label>
-                                                    : <span>1</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-house-chimney"></i>&nbsp;<label>Home
-                                                        Type</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-wave-square"></i>&nbsp;<label>Lot Size</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-calendar-days"></i>&nbsp;<label>Year
-                                                        Build</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-brands fa-ideal"></i>&nbsp;<label>Lead Status</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-shelter"></i>&nbsp;<label>Neighbourhood</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-brands fa-monero"></i>&nbsp;<label>Lead owner</label>
-                                                    : <span>1</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-regular fa-clock"></i>&nbsp;<label>LastUpdated</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-house-laptop"></i>&nbsp;<label>HomeStatusSize</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-calendar-week"></i>&nbsp;<label>DateListed</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-money-bill-transfer"></i>&nbsp;<label>DateSold</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-link"></i>&nbsp;<label>Zillow URL</label>
-                                                    : <span><a href="#">https://www.zillow.com/</a></span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-asterisk"></i>&nbsp;<label>Description</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h4 class="text-center my-3">Population Data <i
-                                            class="fa-solid fa-people-group"></i>
-                                    </h4>
-                                    <div class="row border shadow-sm mx-3">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>Population2014</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>Population2016</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>Population2018</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-arrow-up-right-dots"></i>&nbsp;<label>PopulationGrowthRate</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>Population2015</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>Population2017</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>Population2019</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h4 class="text-center my-3">Listing Agent <br> <i class="fa-solid fa-list-ul"></i>
-                                    </h4>
-                                    <div class="row border shadow-sm mx-3">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-file-signature"></i></i>&nbsp;<label>agentName</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-envelope"></i>&nbsp;<label>agentPhoneNumber</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-phone-volume"></i>&nbsp;<label>Email</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-file-signature"></i></i>&nbsp;<label>brokerName</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-phone-volume"></i>&nbsp;<label>brokerPhoneNumber</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h4 class="text-center my-3">Next Action <br> <i
-                                            class="fa-solid fa-magnifying-glass-arrow-right"></i></h4>
-                                    <div class="row border shadow-sm mx-3">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-diagram-next"></i>&nbsp;<label>NextAction</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-diagram-next"></i>&nbsp;<label>NextActionDate</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-diagram-next"></i>&nbsp;<label>NextActionNote</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h4 class="text-center my-3">Zilow Other Details <i
-                                            class="fa-solid fa-file-shield"></i>
-                                    </h4>
-                                    <div class="row border shadow-sm mx-3">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>isRecentStatusChange</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>listingTypeDimension</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>PageViewCount</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-regular fa-id-badge"></i>&nbsp;<label>mlsid</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>isListedByOwner</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-hourglass-half"></i>&nbsp;<label>timeOnZillow</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-calendar-day"></i>&nbsp;<label>daysOnZillow</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>isForClousre</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul class="list-inline pull-right">
-                                        <li><button type="button" class="default-btn next-step">Continue to next
-                                                step</button></li>
-                                    </ul>
-                                </div>
-                                <!-- <div class="tab-pane zillow" role="tabpanel" id="dataZillow">
-                                    <h4 class="text-center">Zillow <i class="fa-solid fa-crop-simple"></i></h4>
-                                    <div class="form-group">
-                                        <iframe
-                                            src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                            width="100%" height="600"></iframe>
-                                    </div>
-                                    <ul class="list-inline pull-right">
-                                        <li><button type="button" class="default-btn next-step">Continue</button></li>
-                                    </ul>
-                                </div> -->
+                                    </div>                                   
+                                    <div class="d-flex justify-content-around">
+                                        <button class="btn btn-outline-danger">😒 Not-Interested</button>
+                                        <button class="btn btn-outline-secondary">🤔 UnSure</button>
+                                        <button class="btn btn-outline-success">😊 Interested</button>
+                                        <ul class="list-inline pull-right">
+                                            <li><button type="button" class="default-btn next-step">Continue to next
+                                                    step</button></li>
+                                        </ul>
+                                    </div>                                    
+                                </div>                               
                                 <div class="tab-pane" role="tabpanel" id="step2">
-                                    <h4 class="text-center">Financial Information <i
-                                            class="fa-solid fa-hand-holding-dollar"></i></h4>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-money-bill-1-wave"></i>&nbsp;<label>CashonCash</label>
-                                                    : <span>Name</span>
+                                    <h4 class="text-center">2. Property Information <i
+                                        class="fa-solid fa-house-user"></i></h4>
+                                            <div class="row border shadow-sm mx-3">
+                                                <div class="col">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-signature"></i>&nbsp;<label>Lead Name</label>
+                                                            : <span>Name</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-bed"></i>&nbsp;<label>Bedrooms</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-bath"></i>&nbsp;<label>Bathrooms</label>
+                                                            : <span>2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-couch"></i>&nbsp;<label>Living Area</label>
+                                                            : <span>1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-house-chimney"></i>&nbsp;<label>Home
+                                                                Type</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-wave-square"></i>&nbsp;<label>Lot Size</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-calendar-days"></i>&nbsp;<label>Year
+                                                                Build</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-house-laptop"></i>&nbsp;<label>HomeStatus</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-calendar-week"></i>&nbsp;<label>DateListed</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-asterisk"></i>&nbsp;<label>Description</label>
+                                                            : <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Autem minus repellat architecto veritatis, excepturi officiis
+                                                                sapiente nesciunt atque deleniti impedit, reiciendis voluptatem
+                                                                non molestias eligendi quod laboriosam suscipit dolor
+                                                                iure?</span>
+                                                        </div>
+                                                    </div>
+                                                    
+        
+                                                </div>                                    
+                                                <div class="col">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-brands fa-ideal"></i>&nbsp;<label>Lead Status</label>
+                                                            : <span>Name</span>
+                                                        </div>
+                                                    </div>                                            
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-bill-1-wave"></i>&nbsp;<label>CashonCash</label>
+                                                            : <span>Name</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-file-invoice-dollar"></i>&nbsp;<label>ClosingCashonCash</label>
+                                                            : <span>ClosingCashonCash</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-check-dollar"></i>&nbsp;<label>FreeCash</label>
+                                                            : <span>2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-bills"></i>&nbsp;<label>FreeCashYear2</label>
+                                                            : <span>1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-dollar-sign"></i>&nbsp;<label>price</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-sign-hanging"></i>&nbsp;<label>zestimate</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-truck-ramp-box"></i>&nbsp;<label>HUDRent</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-cash-register"></i>&nbsp;<label>ZillowRentEstimate</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-barcode"></i>&nbsp;<label>LastSoldPrice</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-sheet-plastic"></i>&nbsp;<label>PropertyCalculationSpreedsheet</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-link"></i>&nbsp;<label>Zillow URL</label>
+                                                            : <span><a onclick="zillowShow()"
+                                                                    href="#dataZillow">https://www.zillow.com/</a></span>
+                                                        </div>
+                                                    </div> -->
                                                 </div>
+                                                <div class="col">                                            
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-landmark"></i>&nbsp;<label>Mortgage</label>
+                                                            : <span>Name</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-credit-card"></i>&nbsp;<label>DownPayment</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-file-invoice-dollar"></i>&nbsp;<label>ManagementCost</label>
+                                                            : <span>2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-receipt"></i>&nbsp;<label>MaintenanceReserve</label>
+                                                            : <span>1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-hand-holding-dollar"></i>&nbsp;<label>TotalMonthlyExpenses</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;<label>ProppertyTaxRate</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;<label>ProppertyTaxes</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-bill-trend-up"></i>&nbsp;<label>TaxAssessedYear</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-bill-trend-up"></i>&nbsp;<label>TaxAssessedValue</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                                        
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-file-invoice-dollar"></i>&nbsp;<label>ClosingCashonCash</label>
-                                                    : <span>ClosingCashonCash</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-money-check-dollar"></i>&nbsp;<label>FreeCash</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-money-bills"></i>&nbsp;<label>FreeCashYear2</label>
-                                                    : <span>1</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-dollar-sign"></i>&nbsp;<label>price</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-sign-hanging"></i>&nbsp;<label>zestimate</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-truck-ramp-box"></i>&nbsp;<label>HUDRent</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-cash-register"></i>&nbsp;<label>ZillowRentEstimate</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-barcode"></i>&nbsp;<label>LastSoldPrice</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-sheet-plastic"></i>&nbsp;<label>PropertyCalculationSpreedsheet</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-landmark"></i>&nbsp;<label>Mortgage</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-credit-card"></i>&nbsp;<label>DownPayment</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-file-invoice-dollar"></i>&nbsp;<label>ManagementCost</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-receipt"></i>&nbsp;<label>MaintenanceReserve</label>
-                                                    : <span>1</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-hand-holding-dollar"></i>&nbsp;<label>TotalMonthlyExpenses</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;<label>ProppertyTaxRate</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;<label>ProppertyTaxes</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-money-bill-trend-up"></i>&nbsp;<label>TaxAssessedYear</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-money-bill-trend-up"></i>&nbsp;<label>TaxAssessedValue</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul class="list-inline pull-right">
-                                        <li><button type="button" class="default-btn prev-step">Back</button></li>
-                                        </li>
-                                        <li><button type="button" class="default-btn next-step">Continue</button></li>
-                                    </ul>
+                                            <div id="images">
+                                                <div class="bg mt-5">
+                                                    <div class="bg-product mt-5">
+                                                      <div class="container product">
+                                                        <div class="row">
+                                                          <div id="sliderproductP" class="carousel slide " data-ride="carousel" data-interval="10000">
+                                                            <ol class="carousel-indicators">
+                                                              <li data-target="#sliderproduct" data-slide-to="0" class="active"></li>
+                                                              <li data-target="#sliderproduct" data-slide-to="1"></li>
+                                                              <li data-target="#sliderproduct" data-slide-to="2"></li>
+                                                            </ol>
+                                                            <div class="carousel-inner" role="listbox" data-interval="10000000">
+                                                              <div class="carousel-item active">
+                                                                <div class="container text-center">
+                                                                  <div class="row">
+                                                                    <div class="col-sm-6 image">
+                                                                      <div class="item">
+                                                                        
+                                                                        <img class="img-fluid" src="https://ap.rdcpix.com/72ad82a661d5b32371a4b335cdbc56fbl-m2893581152od-w480_h360_x2.jpg" alt="">
+                                                                      </div><!--enditem-->
+                                                                    </div><!--endcol-->
+                                                                    <div class="col-sm-6">
+                                                                      <div class="top d-flex justify-content-center">
+                                                                        <a href=""><b>3</b> <br><i class="fa-solid fa-bed"></i></a>
+                                                                        <a href=""><b>2</b> <br> <i class="fa-solid fa-bath"></i></a>
+                                                                        <a href=""><b>1</b> <br><i class="fa-solid fa-couch"></i></a>
+                                                                        <a href=""><b>3</b> <br><i class="fa-solid fa-calendar-days"></i></a>
+                                                                      </div><!--endtop-->
+                                                                      <div class="details">
+                                                                        <h2 class="cr3">$409,700</h2>
+                                                                        <p class="cr4">912 Shackleton Dr, Canal Fulton, OH 44614,<br> Est. payment: $1,630/mon</p>
+                                                                        <div class="rating">
+                                                                          <i class="fa fa-star"></i>
+                                                                          <i class="fa fa-star"></i>
+                                                                          <i class="fa fa-star"></i>
+                                                                          <i class="fa fa-star"></i>
+                                                                          <i class="fa fa-star"></i>
+                                                                        </div><!--endrating-->
+                                                                        
+                                                                  </div><!--enddetails-->
+                                                                </div><!--endcol-->
+                                                              </div><!--endrow-->
+                                                            </div><!--endcontainer-->
+                                                          </div><!--endcarousel-item-->
+                                                          <div class="carousel-item">
+                                                            <div class="container text-center">
+                                                              <div class="row">
+                                                                <div class="col-sm-6 image">
+                                                                  <div class="item">
+                                                                    
+                                                                    <img class="img-fluid" src="https://ap.rdcpix.com/72ad82a661d5b32371a4b335cdbc56fbl-m4075817548od-w1024_h768_x2_control-C1.webp" alt="">
+                                                                  </div><!--enditem-->
+                                                                </div><!--endcol-->
+                                                                <div class="col-sm-6">
+                                                                  <div class="top d-flex justify-content-center">
+                                                                    <a href=""><b>3</b> <br><i class="fa-solid fa-bed"></i></a>
+                                                                        <a href=""><b>2</b> <br> <i class="fa-solid fa-bath"></i></a>
+                                                                        <a href=""><b>1</b> <br><i class="fa-solid fa-couch"></i></a>
+                                                                        <a href=""><b>3</b> <br><i class="fa-solid fa-calendar-days"></i></a>
+                                                                  </div><!--endtop-->
+                                                                  <div class="details">
+                                                                    <h2 class="cr3">$409,700</h2>
+                                                                        <p class="cr4">912 Shackleton Dr, Canal Fulton, OH 44614,<br> Est. payment: $1,630/mon</p>
+                                                                    <div class="rating">
+                                                                      <i class="fa fa-star"></i>
+                                                                      <i class="fa fa-star"></i>
+                                                                      <i class="fa fa-star"></i>
+                                                                      <i class="fa fa-star"></i>
+                                                                      <i class="fa fa-star"></i>
+                                                                    </div><!--endrating-->
+                                                                
+                                                              </div><!--enddetails-->
+                                                            </div><!--endcol-->
+                                                          </div><!--endrow-->
+                                                        </div><!--endcontainer-->
+                                                      </div><!--endcarousel-item-->
+                                                      <a class="carousel-control-prev fa fa-angle-left" href="#sliderproductP" role="button" data-slide="prev">
+                                                      </a>
+                                                      <a class="carousel-control-next fa fa-angle-right" href="#sliderproductP" role="button" data-slide="next">
+                                                      </a>
+                                                    </div><!--endslidesliderproduct-->
+                                                  </div><!--endrow-->
+                                                  </div><!--endcontainer-->
+                                                  </div><!--endbg-product-->
+                                                  </div>
+                                                  </div>
+                                            </div>             
+                                            <div class="d-flex justify-content-around">
+                                                <button class="btn btn-outline-danger">😒 Not-Interested</button>
+                                                <button class="btn btn-outline-secondary">🤔 UnSure</button>
+                                                <button class="btn btn-outline-success">😊 Interested</button>
+                                                <ul class="list-inline pull-right">
+                                                    <li><button type="button" class="default-btn prev-step">Back</button></li>
+                                                    </li>
+                                                    <li><button type="button" class="default-btn next-step">Continue</button></li>
+                                                </ul>
+                                            </div>                                    
                                 </div>
                                 <div class="tab-pane" role="tabpanel" id="step3">
-                                    <h4 class="text-center"> Derived Information <i class="fa-solid fa-circle-info"></i>
-                                    </h4>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-shoe-prints"></i>&nbsp;<label>walkScore</label>
-                                                    : <span>Name</span>
+                                    <h4 class="text-center">3. Property Information <i
+                                        class="fa-solid fa-house-user"></i></h4>
+                                            <div class="row border shadow-sm mx-3">
+                                                <div class="col">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-signature"></i>&nbsp;<label>Lead Name</label>
+                                                            : <span>Name</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-bed"></i>&nbsp;<label>Bedrooms</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-bath"></i>&nbsp;<label>Bathrooms</label>
+                                                            : <span>2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-couch"></i>&nbsp;<label>Living Area</label>
+                                                            : <span>1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-house-chimney"></i>&nbsp;<label>Home
+                                                                Type</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-wave-square"></i>&nbsp;<label>Lot Size</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-calendar-days"></i>&nbsp;<label>Year
+                                                                Build</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-house-laptop"></i>&nbsp;<label>HomeStatus</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-calendar-week"></i>&nbsp;<label>DateListed</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-asterisk"></i>&nbsp;<label>Description</label>
+                                                            : <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Autem minus repellat architecto veritatis, excepturi officiis
+                                                                sapiente nesciunt atque deleniti impedit, reiciendis voluptatem
+                                                                non molestias eligendi quod laboriosam suscipit dolor
+                                                                iure?</span>
+                                                        </div>
+                                                    </div>
+                                                    
+        
+                                                </div>                                    
+                                                <div class="col">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-brands fa-ideal"></i>&nbsp;<label>Lead Status</label>
+                                                            : <span>Name</span>
+                                                        </div>
+                                                    </div>                                            
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-bill-1-wave"></i>&nbsp;<label>CashonCash</label>
+                                                            : <span>Name</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-file-invoice-dollar"></i>&nbsp;<label>ClosingCashonCash</label>
+                                                            : <span>ClosingCashonCash</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-check-dollar"></i>&nbsp;<label>FreeCash</label>
+                                                            : <span>2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-bills"></i>&nbsp;<label>FreeCashYear2</label>
+                                                            : <span>1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-dollar-sign"></i>&nbsp;<label>price</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-sign-hanging"></i>&nbsp;<label>zestimate</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-truck-ramp-box"></i>&nbsp;<label>HUDRent</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-cash-register"></i>&nbsp;<label>ZillowRentEstimate</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-barcode"></i>&nbsp;<label>LastSoldPrice</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-sheet-plastic"></i>&nbsp;<label>PropertyCalculationSpreedsheet</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-link"></i>&nbsp;<label>Zillow URL</label>
+                                                            : <span><a onclick="zillowShow()"
+                                                                    href="#dataZillow">https://www.zillow.com/</a></span>
+                                                        </div>
+                                                    </div> -->
                                                 </div>
+                                                <div class="col">                                            
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-landmark"></i>&nbsp;<label>Mortgage</label>
+                                                            : <span>Name</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-credit-card"></i>&nbsp;<label>DownPayment</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-file-invoice-dollar"></i>&nbsp;<label>ManagementCost</label>
+                                                            : <span>2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-receipt"></i>&nbsp;<label>MaintenanceReserve</label>
+                                                            : <span>1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-hand-holding-dollar"></i>&nbsp;<label>TotalMonthlyExpenses</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;<label>ProppertyTaxRate</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;<label>ProppertyTaxes</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-bill-trend-up"></i>&nbsp;<label>TaxAssessedYear</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-bill-trend-up"></i>&nbsp;<label>TaxAssessedValue</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                                        
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-motorcycle"></i>&nbsp;<label>bikeScore</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-bus"></i>&nbsp;<label>transitScore</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul class="list-inline pull-right">
-                                        <li><button type="button" class="default-btn prev-step">Back</button></li>
-                                        </li>
-                                        <li><button type="button" class="default-btn next-step">Continue</button></li>
-                                    </ul>
+                                            <div id="images">
+                                                <div class="bg mt-5">
+                                                    <div class="bg-product mt-5">
+                                                      <div class="container product">
+                                                        <div class="row">
+                                                          <div id="sliderproductP3" class="carousel slide " data-ride="carousel" data-interval="10000">
+                                                            <ol class="carousel-indicators">
+                                                              <li data-target="#sliderproduct" data-slide-to="0" class="active"></li>
+                                                              <li data-target="#sliderproduct" data-slide-to="1"></li>
+                                                              <li data-target="#sliderproduct" data-slide-to="2"></li>
+                                                            </ol>
+                                                            <div class="carousel-inner" role="listbox" data-interval="10000000">
+                                                              <div class="carousel-item active">
+                                                                <div class="container text-center">
+                                                                  <div class="row">
+                                                                    <div class="col-sm-6 image">
+                                                                      <div class="item">
+                                                                        
+                                                                        <img class="img-fluid" src="https://wp-tid.zillowstatic.com/52/GA_ATL_DOWNTOWN_82792_078-RT_RT_cropRT-5f9e47.jpg" alt="">
+                                                                      </div><!--enditem-->
+                                                                    </div><!--endcol-->
+                                                                    <div class="col-sm-6">
+                                                                      <div class="top d-flex justify-content-center">
+                                                                        <a href=""><b>3</b> <br><i class="fa-solid fa-bed"></i></a>
+                                                                        <a href=""><b>2</b> <br> <i class="fa-solid fa-bath"></i></a>
+                                                                        <a href=""><b>1</b> <br><i class="fa-solid fa-couch"></i></a>
+                                                                        <a href=""><b>3</b> <br><i class="fa-solid fa-calendar-days"></i></a>
+                                                                      </div><!--endtop-->
+                                                                      <div class="details">
+                                                                        <h2 class="cr3">$309,900</h2>
+                                                                        <p class="cr4">913 Shackleton Dr, Canal Fulton, OH 44614,<br> Est. payment: $1,630/mon</p>
+                                                                        <div class="rating">
+                                                                          <i class="fa fa-star"></i>
+                                                                          <i class="fa fa-star"></i>
+                                                                          <i class="fa fa-star"></i>
+                                                                          <i class="fa fa-star"></i>
+                                                                          <i class="fa fa-star"></i>
+                                                                        </div><!--endrating-->
+                                                                        
+                                                                  </div><!--enddetails-->
+                                                                </div><!--endcol-->
+                                                              </div><!--endrow-->
+                                                            </div><!--endcontainer-->
+                                                          </div><!--endcarousel-item-->
+                                                          <div class="carousel-item">
+                                                            <div class="container text-center">
+                                                              <div class="row">
+                                                                <div class="col-sm-6 image">
+                                                                  <div class="item">
+                                                                    
+                                                                    <img class="img-fluid" src="https://www.decorpot.com/images/blogimage739142804swing-seat-in-balcony.jpg" alt="">
+                                                                  </div><!--enditem-->
+                                                                </div><!--endcol-->
+                                                                <div class="col-sm-6">
+                                                                  <div class="top d-flex justify-content-center">
+                                                                    <a href=""><b>3</b> <br><i class="fa-solid fa-bed"></i></a>
+                                                                        <a href=""><b>2</b> <br> <i class="fa-solid fa-bath"></i></a>
+                                                                        <a href=""><b>1</b> <br><i class="fa-solid fa-couch"></i></a>
+                                                                        <a href=""><b>3</b> <br><i class="fa-solid fa-calendar-days"></i></a>
+                                                                  </div><!--endtop-->
+                                                                  <div class="details">
+                                                                    <h2 class="cr3">$309,900</h2>
+                                                                        <p class="cr4">913 Shackleton Dr, Canal Fulton, OH 44614,<br> Est. payment: $1,630/mon</p>
+                                                                    <div class="rating">
+                                                                      <i class="fa fa-star"></i>
+                                                                      <i class="fa fa-star"></i>
+                                                                      <i class="fa fa-star"></i>
+                                                                      <i class="fa fa-star"></i>
+                                                                      <i class="fa fa-star"></i>
+                                                                    </div><!--endrating-->
+                                                                
+                                                              </div><!--enddetails-->
+                                                            </div><!--endcol-->
+                                                          </div><!--endrow-->
+                                                        </div><!--endcontainer-->
+                                                      </div><!--endcarousel-item-->
+                                                      <a class="carousel-control-prev fa fa-angle-left" href="#sliderproductP3" role="button" data-slide="prev">
+                                                      </a>
+                                                      <a class="carousel-control-next fa fa-angle-right" href="#sliderproductP3" role="button" data-slide="next">
+                                                      </a>
+                                                    </div><!--endslidesliderproduct-->
+                                                  </div><!--endrow-->
+                                                  </div><!--endcontainer-->
+                                                  </div><!--endbg-product-->
+                                                  </div>
+                                                  </div>
+                                            </div> 
+                                            <div class="d-flex justify-content-around">
+                                                <button class="btn btn-outline-danger">😒 Not-Interested</button>
+                                                <button class="btn btn-outline-secondary">🤔 UnSure</button>
+                                                <button class="btn btn-outline-success">😊 Interested</button>
+                                                <ul class="list-inline pull-right">
+                                                    <li><button type="button" class="default-btn prev-step">Back</button></li>
+                                                    </li>
+                                                    <li><button type="button" class="default-btn next-step">Continue</button></li>
+                                                </ul>
+                                            </div> 
                                 </div>
                                 <div class="tab-pane" role="tabpanel" id="step4">
-                                    <h4 class="text-center">Address Details <i class="fa-solid fa-location-dot"></i>
-                                    </h4>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-road"></i>&nbsp;<label>StreetAddress</label>
-                                                    : <span>Name</span>
+                                    <h4 class="text-center">4. Property Information <i
+                                        class="fa-solid fa-house-user"></i></h4>
+                                            <div class="row border shadow-sm mx-3">
+                                                <div class="col">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-signature"></i>&nbsp;<label>Lead Name</label>
+                                                            : <span>Name</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-bed"></i>&nbsp;<label>Bedrooms</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-bath"></i>&nbsp;<label>Bathrooms</label>
+                                                            : <span>2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-couch"></i>&nbsp;<label>Living Area</label>
+                                                            : <span>1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-house-chimney"></i>&nbsp;<label>Home
+                                                                Type</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-wave-square"></i>&nbsp;<label>Lot Size</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-calendar-days"></i>&nbsp;<label>Year
+                                                                Build</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-house-laptop"></i>&nbsp;<label>HomeStatus</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-calendar-week"></i>&nbsp;<label>DateListed</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-asterisk"></i>&nbsp;<label>Description</label>
+                                                            : <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Autem minus repellat architecto veritatis, excepturi officiis
+                                                                sapiente nesciunt atque deleniti impedit, reiciendis voluptatem
+                                                                non molestias eligendi quod laboriosam suscipit dolor
+                                                                iure?</span>
+                                                        </div>
+                                                    </div>
+                                                    
+        
+                                                </div>                                    
+                                                <div class="col">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-brands fa-ideal"></i>&nbsp;<label>Lead Status</label>
+                                                            : <span>Name</span>
+                                                        </div>
+                                                    </div>                                            
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-bill-1-wave"></i>&nbsp;<label>CashonCash</label>
+                                                            : <span>Name</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-file-invoice-dollar"></i>&nbsp;<label>ClosingCashonCash</label>
+                                                            : <span>ClosingCashonCash</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-check-dollar"></i>&nbsp;<label>FreeCash</label>
+                                                            : <span>2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-bills"></i>&nbsp;<label>FreeCashYear2</label>
+                                                            : <span>1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-dollar-sign"></i>&nbsp;<label>price</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-sign-hanging"></i>&nbsp;<label>zestimate</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-truck-ramp-box"></i>&nbsp;<label>HUDRent</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-cash-register"></i>&nbsp;<label>ZillowRentEstimate</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-barcode"></i>&nbsp;<label>LastSoldPrice</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-sheet-plastic"></i>&nbsp;<label>PropertyCalculationSpreedsheet</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-link"></i>&nbsp;<label>Zillow URL</label>
+                                                            : <span><a onclick="zillowShow()"
+                                                                    href="#dataZillow">https://www.zillow.com/</a></span>
+                                                        </div>
+                                                    </div> -->
                                                 </div>
+                                                <div class="col">                                            
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i class="fa-solid fa-landmark"></i>&nbsp;<label>Mortgage</label>
+                                                            : <span>Name</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-credit-card"></i>&nbsp;<label>DownPayment</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-file-invoice-dollar"></i>&nbsp;<label>ManagementCost</label>
+                                                            : <span>2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-receipt"></i>&nbsp;<label>MaintenanceReserve</label>
+                                                            : <span>1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-hand-holding-dollar"></i>&nbsp;<label>TotalMonthlyExpenses</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;<label>ProppertyTaxRate</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;<label>ProppertyTaxes</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-bill-trend-up"></i>&nbsp;<label>TaxAssessedYear</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <i
+                                                                class="fa-solid fa-money-bill-trend-up"></i>&nbsp;<label>TaxAssessedValue</label>
+                                                            : <span>3</span>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                                        
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-tree-city"></i>&nbsp;<label>City</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-flag-usa"></i>&nbsp;<label>State</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-thumbtack"></i>&nbsp;<label>zipcode</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-earth-americas"></i>&nbsp;<label>County</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-flag-usa"></i>&nbsp;<label>Country</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <ul class="list-inline pull-right">
-                                        <li><button type="button" class="default-btn prev-step">Back</button></li>
-                                        <li><button type="button" class="default-btn next-step">Continue</button></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" role="tabpanel" id="step5">
-                                    <h4 class="text-center">County Office Details <i class="fa-solid fa-briefcase"></i>
-                                    </h4>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-signature"></i>&nbsp;<label>Lead Name</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-bed"></i>&nbsp;<label>Bedrooms</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-bath"></i>&nbsp;<label>Bathrooms</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-couch"></i>&nbsp;<label>Living Area</label>
-                                                    : <span>1</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-house-chimney"></i>&nbsp;<label>Home
-                                                        Type</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-wave-square"></i>&nbsp;<label>Lot Size</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-calendar-days"></i>&nbsp;<label>Year
-                                                        Build</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-brands fa-ideal"></i>&nbsp;<label>Lead Status</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-magnifying-glass-location"></i>&nbsp;<label>SecondaryReview</label>
-                                                    <select id="mySelect">
-                                                        <option value="" selected>Choose Secondary Review</option>
-                                                        <option class="interested" value="Interested">😊 Interested
-                                                        </option>
-                                                        <option class="UnSure" value="UnSure">🤔 UnSure</option>
-                                                        <option class="NotInterested" value="NotInterested">😒
-                                                            Not-Interested</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-shelter"></i>&nbsp;<label>Neighbourhood</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-brands fa-monero"></i>&nbsp;<label>Lead owner</label>
-                                                    : <span>1</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-regular fa-clock"></i>&nbsp;<label>LastUpdated</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-house-laptop"></i>&nbsp;<label>HomeStatusSize</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-calendar-week"></i>&nbsp;<label>DateListed</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-money-bill-transfer"></i>&nbsp;<label>DateSold</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-link"></i>&nbsp;<label>Zillow URL</label>
-                                                    : <span><a href="#">https://www.zillow.com/</a></span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-asterisk"></i>&nbsp;<label>Description</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul class="list-inline pull-right">
-                                        <li><button type="button" class="default-btn prev-step">Back</button></li>
-                                        <li><button type="button" class="default-btn next-step">Continue</button></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" role="tabpanel" id="step6">
-                                    <h4 class="text-center">Population Data <i class="fa-solid fa-people-group"></i>
-                                    </h4>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>Population2014</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>Population2016</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>Population2018</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-arrow-up-right-dots"></i>&nbsp;<label>PopulationGrowthRate</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>Population2015</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>Population2017</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>Population2019</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <ul class="list-inline pull-right">
-                                        <li><button type="button" class="default-btn prev-step">Back</button></li>
-                                        <li><button type="button" class="default-btn next-step">Continue</button></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" role="tabpanel" id="step7">
-                                    <h4 class="text-center">Listing Agent <br> <i class="fa-solid fa-list-ul"></i></h4>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-file-signature"></i></i>&nbsp;<label>agentName</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-envelope"></i>&nbsp;<label>agentPhoneNumber</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-solid fa-phone-volume"></i>&nbsp;<label>Email</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-file-signature"></i></i>&nbsp;<label>brokerName</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-phone-volume"></i>&nbsp;<label>brokerPhoneNumber</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <ul class="list-inline pull-right">
-                                        <li><button type="button" class="default-btn prev-step">Back</button></li>
-                                        <li><button type="button" class="default-btn next-step">Continue</button></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" role="tabpanel" id="step8">
-                                    <h4 class="text-center">Next Action <br> <i
-                                            class="fa-solid fa-magnifying-glass-arrow-right"></i></h4>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-diagram-next"></i>&nbsp;<label>NextAction</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-diagram-next"></i>&nbsp;<label>NextActionDate</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-diagram-next"></i>&nbsp;<label>NextActionNote</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <ul class="list-inline pull-right">
-                                        <li><button type="button" class="default-btn prev-step">Back</button></li>
-                                        <li><button type="button" class="default-btn next-step">Continue</button></li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane" role="tabpanel" id="step9">
-                                    <h4 class="text-center">Zilow Other Details <i class="fa-solid fa-file-shield"></i>
-                                    </h4>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>isRecentStatusChange</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>listingTypeDimension</label>
-                                                    : <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>PageViewCount</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i class="fa-regular fa-id-badge"></i>&nbsp;<label>mlsid</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>isListedByOwner</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-hourglass-half"></i>&nbsp;<label>timeOnZillow</label>
-                                                    : <span>Name</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-calendar-day"></i>&nbsp;<label>daysOnZillow</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-person-arrow-up-from-line"></i>&nbsp;<label>isForClousre</label>
-                                                    : <span>2</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <ul class="list-inline pull-right">
-                                        <li><button type="button" class="default-btn prev-step">Back</button></li>
-                                        <li><button type="button" class="default-btn next-step">Continue</button></li>
-                                    </ul>
-                                </div>
+                                            <div id="images">
+                                                <div class="bg mt-5">
+                                                    <div class="bg-product mt-5">
+                                                      <div class="container product">
+                                                        <div class="row">
+                                                          <div id="sliderproductP4" class="carousel slide " data-ride="carousel" data-interval="10000">
+                                                            <ol class="carousel-indicators">
+                                                              <li data-target="#sliderproduct" data-slide-to="0" class="active"></li>
+                                                              <li data-target="#sliderproduct" data-slide-to="1"></li>
+                                                              <li data-target="#sliderproduct" data-slide-to="2"></li>
+                                                            </ol>
+                                                            <div class="carousel-inner" role="listbox" data-interval="10000000">
+                                                              <div class="carousel-item active">
+                                                                <div class="container text-center">
+                                                                  <div class="row">
+                                                                    <div class="col-sm-6 image">
+                                                                      <div class="item">
+                                                                        
+                                                                        <img class="img-fluid" src="https://ap.rdcpix.com/4b2655c6974cc4ac55844f26f59b55b7l-m3111519309od-w1024_h768_x2.jpg" alt="">
+                                                                      </div><!--enditem-->
+                                                                    </div><!--endcol-->
+                                                                    <div class="col-sm-6">
+                                                                      <div class="top d-flex justify-content-center">
+                                                                        <a href=""><b>3</b> <br><i class="fa-solid fa-bed"></i></a>
+                                                                        <a href=""><b>2</b> <br> <i class="fa-solid fa-bath"></i></a>
+                                                                        <a href=""><b>1</b> <br><i class="fa-solid fa-couch"></i></a>
+                                                                        <a href=""><b>3</b> <br><i class="fa-solid fa-calendar-days"></i></a>
+                                                                      </div><!--endtop-->
+                                                                      <div class="details">
+                                                                        <h2 class="cr3">$417,120</h2>
+                                                                        <p class="cr4">914 Shackleton Dr, Canal Fulton, OH 44614,<br> Est. payment: $1,630/mon</p>
+                                                                        <div class="rating">
+                                                                          <i class="fa fa-star"></i>
+                                                                          <i class="fa fa-star"></i>
+                                                                          <i class="fa fa-star"></i>
+                                                                          <i class="fa fa-star"></i>
+                                                                          <i class="fa fa-star"></i>
+                                                                        </div><!--endrating-->
+                                                                        
+                                                                  </div><!--enddetails-->
+                                                                </div><!--endcol-->
+                                                              </div><!--endrow-->
+                                                            </div><!--endcontainer-->
+                                                          </div><!--endcarousel-item-->
+                                                          <div class="carousel-item">
+                                                            <div class="container text-center">
+                                                              <div class="row">
+                                                                <div class="col-sm-6 image">
+                                                                  <div class="item">
+                                                                    
+                                                                    <img class="img-fluid" src="https://ap.rdcpix.com/4b2655c6974cc4ac55844f26f59b55b7l-m233404945od-w1024_h768_x2.webp" alt="">
+                                                                  </div><!--enditem-->
+                                                                </div><!--endcol-->
+                                                                <div class="col-sm-6">
+                                                                  <div class="top d-flex justify-content-center">
+                                                                    <a href=""><b>3</b> <br><i class="fa-solid fa-bed"></i></a>
+                                                                        <a href=""><b>2</b> <br> <i class="fa-solid fa-bath"></i></a>
+                                                                        <a href=""><b>1</b> <br><i class="fa-solid fa-couch"></i></a>
+                                                                        <a href=""><b>3</b> <br><i class="fa-solid fa-calendar-days"></i></a>
+                                                                  </div><!--endtop-->
+                                                                  <div class="details">
+                                                                    <h2 class="cr3">$417,120</h2>
+                                                                        <p class="cr4">914 Shackleton Dr, Canal Fulton, OH 44614,<br> Est. payment: $1,630/mon</p>
+                                                                    <div class="rating">
+                                                                      <i class="fa fa-star"></i>
+                                                                      <i class="fa fa-star"></i>
+                                                                      <i class="fa fa-star"></i>
+                                                                      <i class="fa fa-star"></i>
+                                                                      <i class="fa fa-star"></i>
+                                                                    </div><!--endrating-->
+                                                                
+                                                              </div><!--enddetails-->
+                                                            </div><!--endcol-->
+                                                          </div><!--endrow-->
+                                                        </div><!--endcontainer-->
+                                                      </div><!--endcarousel-item-->
+                                                      <a class="carousel-control-prev fa fa-angle-left" href="#sliderproductP4" role="button" data-slide="prev">
+                                                      </a>
+                                                      <a class="carousel-control-next fa fa-angle-right" href="#sliderproductP4" role="button" data-slide="next">
+                                                      </a>
+                                                    </div><!--endslidesliderproduct-->
+                                                  </div><!--endrow-->
+                                                  </div><!--endcontainer-->
+                                                  </div><!--endbg-product-->
+                                                  </div>
+                                                  </div>
+                                            </div> 
+                                            <div class="d-flex justify-content-around">
+                                                <button class="btn btn-outline-danger">😒 Not-Interested</button>
+                                                <button class="btn btn-outline-secondary">🤔 UnSure</button>
+                                                <button class="btn btn-outline-success">😊 Interested</button>
+                                                <ul class="list-inline pull-right">
+                                                    <li><button type="button" class="default-btn prev-step">Back</button></li>
+                                                    </li>
+                                                    <!-- <li><button type="button" class="default-btn next-step">Continue</button></li> -->
+                                                </ul>
+                                            </div> 
+                                </div>                               
                                 <div class="clearfix"></div>
                             </div>
 

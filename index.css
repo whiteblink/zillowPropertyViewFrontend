@@ -363,7 +363,7 @@ select {
 
   /* Images CSS */
   #images{
-    display: none;
+    /* display: none; */
   }
 
 
@@ -451,7 +451,7 @@ select {
   .col-sm-6.image .item img.img-fluid {
     /* Ai mướn thêm cái vào làm phá bố cục css của người ta.. mún trang web đẹp thì phải lựa cái ảnh đẹp đẹp vào rồi set cái độ rộng cho nó vừa là được rồi */
     /*min-width: 100%;*/
-    width: 315px;
+    /* width: 315px; */
   }
   .col-sm-6.image h1 {
     margin-bottom: 20px;
@@ -551,6 +551,328 @@ select {
   #sliderproduct ol.carousel-indicators {
     display: none;
   }
+
+  /* slider p2 */
+  #sliderproductP{
+    width: 100%;
+  }
+  #sliderproductP .carousel-inner {
+    overflow: visible;
+  }
+  
+  #sliderproductP .col-sm-6.image {
+    background: #fff;
+    box-shadow: 0px 4px 8px 0px #959595;
+    position: relative;
+    /* Thêm cái của nợ này vào bảo sao nó ko tràn bờ đê */
+    /*top: -44px;
+    padding: 100px;
+    padding-top: 40px;*/
+  }
+  
+  
+  #sliderproductP .top a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 14px 22px;
+    background: #e0794f;
+    box-sizing: border-box !important;
+    text-align: center;
+    margin: 0px 2px;
+    display: block;
+    color: #fff;
+    width: 96px;
+  }
+  
+  #sliderproductP .col-sm-4.mr-auto {
+    margin-top: 22px;
+  }
+  
+  #sliderproductP p.cr1 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  
+  #sliderproductP .col-sm-6:last-child {
+    /* Cần nâng cao thêm kiến thức về sử dụng padding */
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+  #sliderproductP .details p.d-inline-block {
+    color: #e0794f;
+  }
+  
+  #sliderproductP .details .fa {
+    color: #e0794f;
+    padding: 0px 3px;
+  }
+  
+  #sliderproductP .rating {
+    margin: 23px 0px;
+  }
+  
+  #sliderproductP .details .btn {
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 16px 22px;
+    background: #e0794f;
+    color: #fff;
+    border-radius: 81px;
+    font-size: 14px;
+    display: inline-block;
+  }
+  
+  #sliderproductP .details h2 {
+    margin: 25px 0px 30px 0px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  #sliderproductP .details p.cr4 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 0px;
+  }
+  #sliderproductP .carousel-item{
+    transition: 0.4s;
+  }
+  
+  
+  #sliderproductP a.carousel-control-prev, #sliderproductP a.carousel-control-next {
+    border-radius: 50%;
+    background-color: brown;
+    width: 46px;
+    height: 46px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%,-60%);
+  }
+  
+  
+  #sliderproductP ol.carousel-indicators {
+    display: none;
+  }
+  /* slider p 2 ends */
+
+
+  /* slider p3 */
+  #sliderproductP3{
+    width: 100%;
+  }
+  #sliderproductP3 .carousel-inner {
+    overflow: visible;
+  }
+  
+  #sliderproductP3 .col-sm-6.image {
+    background: #fff;
+    box-shadow: 0px 4px 8px 0px #959595;
+    position: relative;
+    /* Thêm cái của nợ này vào bảo sao nó ko tràn bờ đê */
+    /*top: -44px;
+    padding: 100px;
+    padding-top: 40px;*/
+  }
+  
+  
+  
+  #sliderproductP3 .top a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 14px 22px;
+    background: #e0794f;
+    box-sizing: border-box !important;
+    text-align: center;
+    margin: 0px 2px;
+    display: block;
+    color: #fff;
+    width: 96px;
+  }
+  
+  #sliderproductP3 .col-sm-4.mr-auto {
+    margin-top: 22px;
+  }
+  
+  #sliderproductP3 p.cr1 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  
+  #sliderproductP3 .col-sm-6:last-child {
+    /* Cần nâng cao thêm kiến thức về sử dụng padding */
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+  #sliderproductP3 .details p.d-inline-block {
+    color: #e0794f;
+  }
+  
+  #sliderproductP3 .details .fa {
+    color: #e0794f;
+    padding: 0px 3px;
+  }
+  
+  #sliderproductP3 .rating {
+    margin: 23px 0px;
+  }
+  
+  #sliderproductP3 .details .btn {
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 16px 22px;
+    background: #e0794f;
+    color: #fff;
+    border-radius: 81px;
+    font-size: 14px;
+    display: inline-block;
+  }
+  
+  #sliderproductP3 .details h2 {
+    margin: 25px 0px 30px 0px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  #sliderproductP3 .details p.cr4 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 0px;
+  }
+  #sliderproductP3 .carousel-item{
+    transition: 0.4s;
+  }
+  
+  
+  #sliderproductP3 a.carousel-control-prev, #sliderproductP3 a.carousel-control-next {
+    border-radius: 50%;
+    background-color: brown;
+    width: 46px;
+    height: 46px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%,-60%);
+  }
+  
+  
+  #sliderproductP3 ol.carousel-indicators {
+    display: none;
+  }
+  /* slider p 3 ends */
+
+
+  /* slider p4 */
+  #sliderproductP4{
+    width: 100%;
+  }
+  #sliderproductP4 .carousel-inner {
+    overflow: visible;
+  }
+  
+  #sliderproductP4 .col-sm-6.image {
+    background: #fff;
+    box-shadow: 0px 4px 8px 0px #959595;
+    position: relative;
+  }
+  
+  #sliderproductP4 .top a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 14px 22px;
+    background: #e0794f;
+    box-sizing: border-box !important;
+    text-align: center;
+    margin: 0px 2px;
+    display: block;
+    color: #fff;
+    width: 96px;
+  }
+  
+  #sliderproductP4 .col-sm-4.mr-auto {
+    margin-top: 22px;
+  }
+  
+  #sliderproductP4 p.cr1 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  
+  #sliderproductP4 .col-sm-6:last-child {
+    /* Cần nâng cao thêm kiến thức về sử dụng padding */
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+  #sliderproductP4 .details p.d-inline-block {
+    color: #e0794f;
+  }
+  
+  #sliderproductP4 .details .fa {
+    color: #e0794f;
+    padding: 0px 3px;
+  }
+  
+  #sliderproductP4 .rating {
+    margin: 23px 0px;
+  }
+  
+  #sliderproductP4 .details .btn {
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 16px 22px;
+    background: #e0794f;
+    color: #fff;
+    border-radius: 81px;
+    font-size: 14px;
+    display: inline-block;
+  }
+  
+  #sliderproductP4 .details h2 {
+    margin: 25px 0px 30px 0px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  #sliderproductP4 .details p.cr4 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 0px;
+  }
+  #sliderproductP4 .carousel-item{
+    transition: 0.4s;
+  }
+  
+  
+  #sliderproductP4 a.carousel-control-prev, #sliderproductP4 a.carousel-control-next {
+    border-radius: 50%;
+    background-color: brown;
+    width: 46px;
+    height: 46px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%,-60%);
+  }
+  
+  
+  #sliderproductP4 ol.carousel-indicators {
+    display: none;
+  }
+  /* slider p 4 ends */
   
   .footer {
     position: fixed;
