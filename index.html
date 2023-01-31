@@ -358,10 +358,10 @@
 
                                     <div class="my-3">
                                         <a class="btn btn-info mx-3" target="_blank"
-                                            href="https://accounts.zoho.in/signin?servicename=CRMPlus&signupurl=https://www.zoho.in/crm/crmplus/signup.html">Go
+                                            href="https://crmplus.zoho.com/realestate2326/index.do/cxapp/crm/org768815691/tab/Leads/{{responseData.id}}">Go
                                             to Zoho CRM</a>
                                         <a class="btn btn-info mx-3 pull-right " target="_blank"
-                                            href=`{{responseData.zillowUrl}}`>Go
+                                            href="{{responseData.zillowUrl}}">Go
                                             to Zillow</a>
                                     </div>
                                 </div>
@@ -396,15 +396,23 @@
 
                 $.ajax(settings).done(function (response) {
                     console.log(response);
+                    if(response === ""){
+                        $('.signup-step-container').css({
+                            "display": "none",                                                        
+                        });
+                        document.write(`<h1 style="text-align: center; font-family:sans-serif; justify-content:center;line-height:50%; ">There are no more properties for review. Please check again later.</h1>`);
+                    }
                     $scope.disableButton = false;
                     $scope.responseData = response;
+                    console.log($scope.responseData.zillowUrl);
                     $scope.$apply();
                 });
             }
             getData();
 
             $('.next-step').click(function (e) { 
-                $scope.disableButton = true;  
+                $scope.disableButton = true; 
+                toastr.info('Adding Secondary Review!'); 
                 $scope.$apply();
                 console.log("In second API")
                 let secondaryReview = e.target.value;
