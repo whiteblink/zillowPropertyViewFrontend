@@ -326,24 +326,9 @@ input[type="checkbox"]:checked::before{
 
 
 
-@media (max-width: 767px){
-	.sign-content h3{
-		font-size: 40px;
-	}
-	.wizard .nav-tabs > li a i{
-		display: none;
-	}
-	.signup-logo-header .navbar-toggle{
-		margin: 0;
-		margin-top: 8px;
-	}
-	.signup-logo-header .logo_area{
-		margin-top: 0;
-	}
-	.signup-logo-header .header-flex{
-		display: block;
-	}
-}
+
+
+
 
 
 select {
@@ -360,11 +345,6 @@ select {
   }
 
 
-
-  /* Images CSS */
-  #images{
-    /* display: none; */
-  }
 
 
   :root{
@@ -554,7 +534,7 @@ select {
   }
   
   .bg {
-    height: 370px;
+    /* height: 370px; */
     overflow: hidden;
   }
   
@@ -595,4 +575,62 @@ select {
     border-radius: 50%;
     color: #E0794F;
   }
+
  
+
+
+  @media (max-width:425px) {
+      .SpreedSheetText{
+        font-size: 11px;
+      }
+      #imageInfo{
+        padding: 2px!important;
+        margin-left: 0!important;
+        margin-bottom: 0!important;
+      }
+      .next-step{
+        margin: 8px;
+      }
+      #zohoBtn{
+        margin-left: 0!important;
+        margin-right: 0!important;
+      }
+      
+  }
+
+  @media (min-width:480px) and (max-width:780px) {
+    #carousel-innerData{
+      margin-left: 20vh;
+    }
+  }
+  @media (min-width:800px) and (max-width:1050px) {
+    #carousel-innerData{
+      margin-left: 2vh;
+    }
+  }
+  @media (min-width:1051px) {
+    #carousel-innerData{
+      margin-left: 9vh;
+    }
+  }
+ 
+
+  @media (max-width: 770px){
+    .sign-content h3{
+      font-size: 40px;
+    }
+    .wizard .nav-tabs > li a i{
+      display: none;
+    }
+    .signup-logo-header .navbar-toggle{
+      margin: 0;
+      margin-top: 8px;
+    }
+    .signup-logo-header .logo_area{
+      margin-top: 0;
+    }
+    .signup-logo-header .header-flex{
+      display: block;
+    }
+    
+  }
