@@ -69,6 +69,8 @@
                                 Not-Interested</button>
                             <button type="button" ng-disabled="disableButton" class="btn btn-outline-secondary next-step" value="Unsure">🤔
                                 UnSure</button>
+                                <button type="button" ng-disabled="disableButton" class="btn btn-outline-info next-step" value="Needs_too_much_work">😬
+                                    Needs too much Work</button>
                             <button type="button" ng-disabled="disableButton" class="btn btn-outline-success next-step" value="Interested">😊
                                 Interested</button>
                         </div>
@@ -405,21 +407,21 @@
 
             $('.next-step').click(function (e) { 
                 $scope.disableButton = true; 
-                toastr.info('Adding Secondary Review!'); 
+                toastr.info('Adding Lead Status!'); 
                 $scope.$apply();
-                console.log("In second API")
-                let secondaryReview = e.target.value;
-                console.log(secondaryReview);
+                console.log("In second API");
+                let leadStatus = e.target.value;
+                console.log(leadStatus);
                 var settings = {
                     "url": "https://zillowsync.onrender.com/zoho/disposeProperty?zohoLeadId=" +
-                        $scope.responseData.id + "&secondaryReview=" + secondaryReview,
+                        $scope.responseData.id + "&leadStatus=" + leadStatus,
                     "method": "GET",
                     "timeout": 0,
                 };
 
                 $.ajax(settings).done(function (response) {
                     console.log(response);                   
-                    toastr.success('Secondary Review Added Successfully!');
+                    toastr.success('Lead Status Added Successfully!');
                     getData();                    
                 });
             })
