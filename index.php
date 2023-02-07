@@ -1,9 +1,12 @@
+<?php
+include_once 'constants.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <title>Test Document</title>
@@ -384,7 +387,7 @@
             $scope.disableButton = false;
             function getData() {                
                 var settings = {
-                    "url": "https://zillowsync.onrender.com/zoho/getNextProperty",
+                    "url": "<?php echo BACKEND_URL;?>/zoho/getNextProperty",
                     "method": "GET",
                     "timeout": 0,
                 };
@@ -413,7 +416,7 @@
                 let leadStatus = e.target.value;
                 console.log(leadStatus);
                 var settings = {
-                    "url": "https://zillowsync.onrender.com/zoho/disposeProperty?zohoLeadId=" +
+                    "url": "<?php echo BACKEND_URL;?>/zoho/disposeProperty?zohoLeadId=" +
                         $scope.responseData.id + "&leadStatus=" + leadStatus,
                     "method": "GET",
                     "timeout": 0,
