@@ -149,6 +149,7 @@ if (isset($_SESSION['fileID'])) {
             $.ajax(settings).done(function (response){
                 console.log(response);
                 $scope.propertiesCSV = response;
+                $scope.propertiesCSV = $scope.sortArray($scope.propertiesCSV);
                 $scope.$apply();
             }).fail(function(err){
                 console.log(err);
@@ -157,12 +158,6 @@ if (isset($_SESSION['fileID'])) {
         getData();
 
         $scope.setSessionByFileName = function (data){
-            console.log("file name = ", data);
-            // delete data.$$hashKey;
-            // var id = data.id
-            // var tempObj = JSON.parse(`{"id":"${data.id}", "age":30, "city":"New York"}`);
-
-
             let setting = {
                 "url": "setsessions.php",
                 "method": "POST",
@@ -174,7 +169,6 @@ if (isset($_SESSION['fileID'])) {
             };
 
             $.ajax(setting).done(function (result) {
-                console.log("result -------0",result)
                 // $("#userLoginButton").html("Logged In");
                 toastr.options = {
                     "closeButton": true,
@@ -203,13 +197,11 @@ if (isset($_SESSION['fileID'])) {
         }
 
         $scope.changeTimezoneTableFormat = (data) => {
-            console.log("data = ",data)
             if(data==null || data==undefined){
                 return ""
             }
             var timezone="America/Detroit";
             if(data!==null && data!==undefined && data!== '') {
-                console.log("insdie if-");
                 timezone = "America/Detroit";
                 return moment(data).tz(timezone).format('YYYYMMDDHHmmss');
             } else {
@@ -218,19 +210,15 @@ if (isset($_SESSION['fileID'])) {
         }
 
         $scope.changeTimezoneDefault = (data) => {
-            console.log("god = ",data)
-
             if(data==null || data==undefined){
                 return ""
             }
 
             var timezone="America/Detroit"
             if(data!==null && data!==undefined && data!== '') {
-                console.log("insdie if - ");
                 timezone = "America/Detroit";
                 return moment(data).tz(timezone).format('MMM DD, YYYY hh:mm A');
             } else {
-                console.log("in else")
                 return '';
             }
         }
@@ -301,6 +289,15 @@ if (isset($_SESSION['fileID'])) {
                 $("#upload-csv-modal").modal('toggle');
             });
         };
+
+        $scope.sortArray = function(arr) {
+            arr.sort(function(a, b) {
+                var dateA = new Date(a.objectCreated);
+                var dateB = new Date(b.objectCreated);
+                return dateA - dateB;
+            });
+            return arr;
+        }
 
     })
 </script>
