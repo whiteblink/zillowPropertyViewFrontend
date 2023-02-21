@@ -148,8 +148,7 @@ if (isset($_SESSION['fileID'])) {
 
             $.ajax(settings).done(function (response){
                 console.log(response);
-                $scope.propertiesCSV = response;
-                $scope.propertiesCSV = $scope.sortArray($scope.propertiesCSV);
+                $scope.propertiesCSV = $scope.sortArray(response);
                 $scope.$apply();
             }).fail(function(err){
                 console.log(err);
@@ -294,7 +293,7 @@ if (isset($_SESSION['fileID'])) {
             arr.sort(function(a, b) {
                 var dateA = new Date(a.objectCreated);
                 var dateB = new Date(b.objectCreated);
-                return dateA - dateB;
+                return  dateB - dateA;
             });
             return arr;
         }
