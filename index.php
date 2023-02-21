@@ -78,8 +78,6 @@ include_once 'constants.php';
                                     Needs too much Work</button>
                             <button type="button" ng-disabled="disableButton" class="btn btn-outline-success next-step" value="Interested">😊
                                 Interested</button>
-                            <button type="button" class="btn btn-outline-warning reset-session-class" ng-click="openUploadCSVModal()">📤
-                                Upload CSV</button>
                             <a class="btn btn-outline-primary reset-session-class" href="./logout.php"><i class="fa fa-power-off"></i> Reset Session</a>
                         </div>
 
@@ -494,69 +492,7 @@ include_once 'constants.php';
                 $("#upload-csv-modal").modal('toggle');
             }
 
-            $scope.uploadCSVFile = function() {
-                $("#upload_button").prop('disabled', true);
-                $("#upload_button").html('Uploading...');
-                var form = new FormData();
-                form.append(`file`, document.getElementById("inputGroupFile01").files[0]);
 
-                var settings = {
-                    "url": "<?php echo BACKEND_URL;?>/zoho/uploadCsvFile",
-                    "method": "POST",
-                    "timeout": 0,
-                    "processData": false,
-                    "mimeType": "multipart/form-data",
-                    "contentType": false,
-                    "data": form
-                };
-
-                $.ajax(settings).done(function (response) {
-                    let res = JSON.parse(response);
-                    console.log("success ",res.message);
-                    toastr.options = {
-                        "closeButton": true,
-                        "newestOnTop": true,
-                        "positionClass": "toast-top-right",
-                        "preventDuplicates": false,
-                        "showDuration": "300",
-                        "hideDuration": "1000",
-                        "timeOut": "2000",
-                        "extendedTimeOut": "1000",
-                        "showEasing": "swing",
-                        "hideEasing": "linear",
-                        "showMethod": "fadeIn",
-                        "hideMethod": "fadeOut"
-                    };
-                    toastr["success"]("File Upload Successfully", "Success!");
-                    $("#upload_button").prop('disabled', false);
-                    $("#upload_button").html('Upload');
-                    $("#upload-csv-modal").modal('toggle');
-                    setTimeout(()=>{
-                        window.location.reload();
-                    },2000)
-                }).fail(function(error){
-                    console.log("error ",error)
-                    toastr.options = {
-                        "closeButton": true,
-                        "newestOnTop": true,
-                        "positionClass": "toast-top-right",
-                        "preventDuplicates": false,
-                        "showDuration": "300",
-                        "hideDuration": "1000",
-                        "timeOut": "2000",
-                        "extendedTimeOut": "1000",
-                        "showEasing": "swing",
-                        "hideEasing": "linear",
-                        "showMethod": "fadeIn",
-                        "hideMethod": "fadeOut"
-                    };
-                    toastr["error"]("Failed to Upload!", "Error!");
-                    $("#upload_button").prop('disabled', false);
-                    $("#upload_button").html('Upload');
-                    $("#upload-csv-modal").modal('toggle');
-                });
-
-            };
 
         })
     </script>
