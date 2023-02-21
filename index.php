@@ -1,5 +1,7 @@
 <?php
+require('checksession.php');
 include_once 'constants.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,11 +11,11 @@ include_once 'constants.php';
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <title>Test Document</title>
+    <title>Portal</title>
 </head>
 
-<body ng-app="myApp" ng-controller="formCtrl" ng-cloak>
-    <section class="signup-step-container">
+<body ng-app="myApp" ng-controller="formCtrl" id="angularController" ng-cloak>
+<section class="signup-step-container">
         <div class="">
             <div class="row d-flex justify-content-center ml-0 mr-0">
                 <div class="col">
@@ -72,10 +74,13 @@ include_once 'constants.php';
                                 Not-Interested</button>
                             <button type="button" ng-disabled="disableButton" class="btn btn-outline-secondary next-step" value="Unsure">🤔
                                 UnSure</button>
-                                <button type="button" ng-disabled="disableButton" class="btn btn-outline-info next-step" value="Needs_too_much_work">😬
+                            <button type="button" ng-disabled="disableButton" class="btn btn-outline-info next-step" value="Needs_too_much_work">😬
                                     Needs too much Work</button>
                             <button type="button" ng-disabled="disableButton" class="btn btn-outline-success next-step" value="Interested">😊
                                 Interested</button>
+                            <button type="button" class="btn btn-outline-warning reset-session-class" ng-click="openUploadCSVModal()">📤
+                                Upload CSV</button>
+                            <a class="btn btn-outline-primary reset-session-class" href="./logout.php"><i class="fa fa-power-off"></i> Reset Session</a>
                         </div>
 
                         <form role="form" action="index.html" class="login-box">
@@ -371,6 +376,45 @@ include_once 'constants.php';
             </div>
         </div>
     </section>
+
+<div class="modal fade" id="upload-csv-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-colored-header bg-primary">
+                <h4 class="modal-title text-white" id="fail-request-modalLabel">Upload a CSV File</h4>
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form name="uploadForm">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="control-label col-form-label">Select File <span style="color: red">*</span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Upload</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" name="fileInput" class="custom-file-input" id="inputGroupFile01" ng-model="file" onchange="chagningOperation(this)" accept=".csv">
+                                        <label class="custom-file-label" for="inputGroupFile01">Choose a CSV file</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <button class="btn btn-primary" id="upload_button" ng-click="uploadCSVFile()" ng-disabled="!enableSubmit">Upload</button>
+                            </div>
+                        </div>
+                        <!--                                <button type="button" id="clear-button" ng-click="clear()">Clear</button>-->
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
         integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -382,12 +426,28 @@ include_once 'constants.php';
     <script src="./index.js"></script>
 
     <script>
+
+        function chagningOperation(e){
+            var scope = angular.element(document.getElementById("angularController")).scope();
+            scope.selectedValue = $(e).val();
+            scope.file = scope.selectedValue;
+            if(scope.selectedValue !== null){
+                scope.enableSubmit = true;
+                $(e).siblings(".custom-file-label").html(e.files[0].name);
+
+                scope.$apply();
+            }else{
+                scope.enableSubmit = false;
+                scope.$apply();
+            }
+        }
+
         var app = angular.module('myApp', []);
         app.controller('formCtrl', function ($scope) {
             $scope.disableButton = false;
             function getData() {                
                 var settings = {
-                    "url": "<?php echo BACKEND_URL;?>/zoho/getNextProperty",
+                    "url": "<?php echo BACKEND_URL;?>/zoho/getNextProperty?zohoLeadsCsvDetailsId="+"<?php echo $_SESSION['fileID'];?>",
                     "method": "GET",
                     "timeout": 0,
                 };
@@ -417,17 +477,86 @@ include_once 'constants.php';
                 console.log(leadStatus);
                 var settings = {
                     "url": "<?php echo BACKEND_URL;?>/zoho/disposeProperty?zohoLeadId=" +
-                        $scope.responseData.id + "&leadStatus=" + leadStatus,
+                        $scope.responseData.id + "&leadStatus=" + leadStatus +"&zohoLeadsCsvDetailsId="+"<?php echo $_SESSION['fileID'];?>",
                     "method": "GET",
                     "timeout": 0,
                 };
 
                 $.ajax(settings).done(function (response) {
-                    console.log(response);                   
+                    console.log(response);
                     toastr.success('Lead Status Added Successfully!');
-                    getData();                    
+                    getData();
                 });
-            })
+            });
+
+            $scope.openUploadCSVModal = function(){
+                console.log('open upload csv modal');
+                $("#upload-csv-modal").modal('toggle');
+            }
+
+            $scope.uploadCSVFile = function() {
+                $("#upload_button").prop('disabled', true);
+                $("#upload_button").html('Uploading...');
+                var form = new FormData();
+                form.append(`file`, document.getElementById("inputGroupFile01").files[0]);
+
+                var settings = {
+                    "url": "<?php echo BACKEND_URL;?>/zoho/uploadCsvFile",
+                    "method": "POST",
+                    "timeout": 0,
+                    "processData": false,
+                    "mimeType": "multipart/form-data",
+                    "contentType": false,
+                    "data": form
+                };
+
+                $.ajax(settings).done(function (response) {
+                    let res = JSON.parse(response);
+                    console.log("success ",res.message);
+                    toastr.options = {
+                        "closeButton": true,
+                        "newestOnTop": true,
+                        "positionClass": "toast-top-right",
+                        "preventDuplicates": false,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "2000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+                    toastr["success"]("File Upload Successfully", "Success!");
+                    $("#upload_button").prop('disabled', false);
+                    $("#upload_button").html('Upload');
+                    $("#upload-csv-modal").modal('toggle');
+                    setTimeout(()=>{
+                        window.location.reload();
+                    },2000)
+                }).fail(function(error){
+                    console.log("error ",error)
+                    toastr.options = {
+                        "closeButton": true,
+                        "newestOnTop": true,
+                        "positionClass": "toast-top-right",
+                        "preventDuplicates": false,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "2000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    };
+                    toastr["error"]("Failed to Upload!", "Error!");
+                    $("#upload_button").prop('disabled', false);
+                    $("#upload_button").html('Upload');
+                    $("#upload-csv-modal").modal('toggle');
+                });
+
+            };
 
         })
     </script>
