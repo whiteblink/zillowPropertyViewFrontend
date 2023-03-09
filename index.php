@@ -95,7 +95,7 @@ include_once 'constants.php';
                                                               <div class="carousel-item " ng-repeat="image in responseData.zillowImageUrls"
                                                               ng-class="{'active':$index === 0}">
                                                                 <img class="d-block w-10 " ng-src="{{image}}" alt="First slide">
-                                                              </div>                                                              
+                                                              </div>
                                                             </div>
                                                             <a   class="carousel-control-prev fa fa-angle-left " id="left_icon" href="#carouselExampleControls" role="button" data-slide="prev">
                                                               <span class="sr-only">Previous</span>
@@ -104,7 +104,7 @@ include_once 'constants.php';
                                                               <span class="sr-only">Next</span>
                                                             </a>
                                                           </div>
-                                                        </div>                                                        
+                                                        </div>
                                                         <div class="col-lg-6">
                                                             <div class="top d-flex justify-content-center">
                                                                 <span style="background-color: #E0794F;"
@@ -124,7 +124,7 @@ include_once 'constants.php';
                                                             </div>
                                                             <!--endtop-->
                                                             <div class="details mx-5 my-3">
-                                                                <h2 class="cr3 text-center">${{responseData.price}}</h2>
+                                                                <h2 class="cr3 text-center">${{responseData.price | number}}</h2>
                                                                 <p class="cr4 text-center">{{responseData.leadName}}</p>
                                                             </div>
                                                             <!--enddetails-->
@@ -141,45 +141,45 @@ include_once 'constants.php';
                                     </h4>
                                     <div class="row border pt-3 shadow-sm mx-3">
                                         <div class="col">
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i class="fa-solid fa-signature"></i>&nbsp;<label>Lead Name</label>
                                                     : <span>{{responseData.leadName}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i class="fa-solid fa-bed"></i>&nbsp;<label>Bedrooms</label>
                                                     : <span>{{responseData.bedrooms}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i class="fa-solid fa-bath"></i>&nbsp;<label>Bathrooms</label>
                                                     : <span>{{responseData.bathrooms}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i class="fa-solid fa-couch"></i>&nbsp;<label>Living Area</label>
                                                     : <span>{{responseData.livingArea}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i class="fa-solid fa-house-chimney"></i>&nbsp;<label>Home
                                                         Type</label>
                                                     : <span>{{responseData.homeType}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i class="fa-solid fa-wave-square"></i>&nbsp;<label>Lot Size</label>
                                                     : <span>{{responseData.lotSize}}</span>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i class="fa-solid fa-asterisk"></i>&nbsp;<label>Description</label>
                                                     : <span>{{responseData.description}}</span>
@@ -189,113 +189,128 @@ include_once 'constants.php';
 
                                         </div>
                                         <div class="col">
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i class="fa-solid fa-calendar-days"></i>&nbsp;<label>Year
                                                         Build</label>
                                                     : <span>{{responseData.yearBuilt}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-house-laptop"></i>&nbsp;<label>HomeStatus</label>
                                                     : <span>{{responseData.homeStatus}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-calendar-week"></i>&nbsp;<label>DateListed</label>
                                                     : <span>{{responseData.dateListed}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i class="fa-brands fa-ideal"></i>&nbsp;<label>Lead Status</label>
                                                     : <span>{{responseData.leadStatus}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
-                                                <div class="form-group">
-                                                    <i
-                                                        class="fa-solid fa-money-bill-1-wave"></i>&nbsp;<label>CashonCash</label>
-                                                    : <span>{{responseData.cashonCash}}</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-14">
+<!--                                           coc-->
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-file-invoice-dollar"></i>&nbsp;<label>ClosingCashonCash</label>
                                                     : <span>{{responseData.closingCashonCash}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-money-check-dollar"></i>&nbsp;<label>FreeCash</label>
                                                     : <span>{{responseData.freeCash}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-money-bills"></i>&nbsp;<label>FreeCashYear2</label>
                                                     : <span>{{responseData.freeCashYear2}}</span>
                                                 </div>
                                             </div>
+<!--                                            <div class="col-md-12">-->
+<!--                                                <div class="form-group">-->
+<!--                                                    <i-->
+<!--                                                        class="fa-solid fa-wrench"></i>&nbsp;<label>Renovated</label>-->
+<!--                                                    : <span>{{responseData.freeCashYear2}}</span>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="col-md-12">-->
+<!--                                                <div class="form-group">-->
+<!--                                                    <i-->
+<!--                                                        class="fa-solid fa-address-card"></i>&nbsp;<label>Package or Portfolio</label>-->
+<!--                                                    : <span>{{responseData.freeCashYear2}}</span>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
 
                                         </div>
 
                                         <div class="col">
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i class="fa-solid fa-dollar-sign"></i>&nbsp;<label>price</label>
-                                                    : <span>{{responseData.price}}</span>
+                                                    : <span>{{responseData.price | number}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                            class="fa-solid fa-money-bill-1-wave"></i>&nbsp;<label>CashonCash</label>
+                                                    : <span>{{responseData.cashonCash}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-sign-hanging"></i>&nbsp;<label>zestimate</label>
                                                     : <span>{{responseData.zestimate}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i class="fa-solid fa-landmark"></i>&nbsp;<label>Mortgage</label>
                                                     : <span>{{responseData.mortgage}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-credit-card"></i>&nbsp;<label>DownPayment</label>
                                                     : <span>{{responseData.downPayment}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-file-invoice-dollar"></i>&nbsp;<label>ManagementCost</label>
                                                     : <span>{{responseData.managementCost}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-receipt"></i>&nbsp;<label>MaintenanceReserve</label>
                                                     : <span>{{responseData.maintenanceReserve}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-hand-holding-dollar"></i>&nbsp;<label>TotalMonthlyExpenses</label>
                                                     : <span>{{responseData.totalMonthlyExpenses}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;<label>ProppertyTaxRate</label>
@@ -305,49 +320,49 @@ include_once 'constants.php';
 
                                         </div>
                                         <div class="col">
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;<label>ProppertyTaxes</label>
                                                     : <span>{{responseData.propertyTaxes}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-money-bill-trend-up"></i>&nbsp;<label>TaxAssessedYear</label>
                                                     : <span>{{responseData.taxAssessedYear}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-money-bill-trend-up"></i>&nbsp;<label>TaxAssessedValue</label>
                                                     : <span>{{responseData.taxAssessedValue}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-truck-ramp-box"></i>&nbsp;<label>HUDRent</label>
                                                     : <span>{{responseData.hudrent}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-cash-register"></i>&nbsp;<label>ZillowRentEstimate</label>
                                                     : <span>{{responseData.zillowRentEstimate}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-barcode"></i>&nbsp;<label>LastSoldPrice</label>
                                                     : <span>{{responseData.lastSoldPrice}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-14">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
                                                         class="fa-solid fa-sheet-plastic"></i>&nbsp;<label>PropertyCalculationSpreedsheet</label>
@@ -416,7 +431,7 @@ include_once 'constants.php';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
         integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://kit.fontawesome.com/2d8c935d03.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -443,7 +458,7 @@ include_once 'constants.php';
         var app = angular.module('myApp', []);
         app.controller('formCtrl', function ($scope) {
             $scope.disableButton = false;
-            function getData() {                
+            function getData() {
                 var settings = {
                     "url": "<?php echo BACKEND_URL;?>/zoho/getNextProperty?zohoLeadsCsvDetailsId="+"<?php echo $_SESSION['fileID'];?>",
                     "method": "GET",
@@ -452,23 +467,38 @@ include_once 'constants.php';
 
                 $.ajax(settings).done(function (response) {
                     console.log(response);
-                    if(response === ""){
+                    if (response === "") {
                         $('.signup-step-container').css({
-                            "display": "none",                                                        
+                            "display": "none",
                         });
-                        document.write(`<h1 style="text-align: center; font-family:sans-serif; justify-content:center;line-height: 100px; ">There are no more properties for review. Please check again later.</h1>`);
+                        // Create and append the logout button
+                        var logoutBtn = $('<a>').addClass('btn btn-outline-primary reset-session-class')
+                            .attr('href', './logout.php')
+                            .html('<i class="fa fa-power-off"></i> Reset Session');
+                        $('body').addClass('text-center').append(logoutBtn); // Add the 'text-center' class to center the button
+                        $('<h1>').text('There are no more properties for review. Please check again later.')
+                            .css({
+                                'text-align': 'center',
+                                'font-family': 'sans-serif',
+                                'justify-content': 'center',
+                                'line-height': '100px',
+                                'font-weight': 'bold'
+                            })
+                            .appendTo('body');
                     }
                     $scope.disableButton = false;
                     $scope.responseData = response;
                     console.log($scope.responseData.zillowUrl);
                     $scope.$apply();
+                }).fail(function (err) {
+                    console.log(err);
                 });
             }
             getData();
 
-            $('.next-step').click(function (e) { 
-                $scope.disableButton = true; 
-                toastr.info('Adding Lead Status!'); 
+            $('.next-step').click(function (e) {
+                $scope.disableButton = true;
+                toastr.info('Adding Lead Status!','',{timeOut: 500});
                 $scope.$apply();
                 console.log("In second API");
                 let leadStatus = e.target.value;
@@ -481,18 +511,13 @@ include_once 'constants.php';
                 };
 
                 $.ajax(settings).done(function (response) {
-                    console.log(response);
-                    toastr.success('Lead Status Added Successfully!');
+                    // console.log(response);
+                    toastr.success('Lead Status Added Successfully!','', {timeOut: 500});
                     getData();
+                }).fail(function(err){
+                    console.log(err);
                 });
             });
-
-            $scope.openUploadCSVModal = function(){
-                console.log('open upload csv modal');
-                $("#upload-csv-modal").modal('toggle');
-            }
-
-
 
         })
     </script>
