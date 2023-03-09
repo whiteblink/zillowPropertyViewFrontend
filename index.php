@@ -125,6 +125,7 @@ include_once 'constants.php';
                                                             <!--endtop-->
                                                             <div class="details mx-5 my-3">
                                                                 <h2 class="cr3 text-center">${{responseData.price | number}}</h2>
+                                                                <h4 class="cr4 text-center">Cash on Cash: {{responseData.cashonCash}}</h4>
                                                                 <p class="cr4 text-center">{{responseData.leadName}}</p>
                                                             </div>
                                                             <!--enddetails-->
@@ -216,6 +217,13 @@ include_once 'constants.php';
                                                     : <span>{{responseData.leadStatus}}</span>
                                                 </div>
                                             </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                            class="fa-solid fa-money-bill-1-wave"></i>&nbsp;<label>CashonCash</label>
+                                                    : <span>{{responseData.cashonCash}}</span>
+                                                </div>
+                                            </div>
 <!--                                           coc-->
                                             <div class="col-md-12">
                                                 <div class="form-group">
@@ -262,13 +270,7 @@ include_once 'constants.php';
                                                     : <span>{{responseData.price | number}}</span>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <i
-                                                            class="fa-solid fa-money-bill-1-wave"></i>&nbsp;<label>CashonCash</label>
-                                                    : <span>{{responseData.cashonCash}}</span>
-                                                </div>
-                                            </div>
+
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <i
