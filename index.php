@@ -246,20 +246,20 @@ include_once 'constants.php';
                                                     : <span>{{responseData.freeCashYear2}}</span>
                                                 </div>
                                             </div>
-<!--                                            <div class="col-md-12">-->
-<!--                                                <div class="form-group">-->
-<!--                                                    <i-->
-<!--                                                        class="fa-solid fa-wrench"></i>&nbsp;<label>Renovated</label>-->
-<!--                                                    : <span>{{responseData.freeCashYear2}}</span>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-<!--                                            <div class="col-md-12">-->
-<!--                                                <div class="form-group">-->
-<!--                                                    <i-->
-<!--                                                        class="fa-solid fa-address-card"></i>&nbsp;<label>Package or Portfolio</label>-->
-<!--                                                    : <span>{{responseData.freeCashYear2}}</span>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-wrench"></i>&nbsp;<label>Is Renovated</label>
+                                                    : <span>{{responseData.isRenovated ? 'Yes':'No'}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <i
+                                                        class="fa-solid fa-address-card"></i>&nbsp;<label>Has Package/Portfolio</label>
+                                                    : <span>{{responseData.isPackageOrPortfolio ? 'Yes' : 'No'}}</span>
+                                                </div>
+                                            </div>
 
                                         </div>
 
